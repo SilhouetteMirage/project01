@@ -1,28 +1,43 @@
-import React, { useState } from 'react';
+import React from 'react';
+import ImageToggleOnScroll from '../src/ImageToggleOnScroll.js';
+import styles from '../src/Style.module.css';
 
-const InputElement = () => {
-
-    const [inputText, setInputText] = useState("");
-    const [historyList, setHistoryList] = useState([]);
-
-    return <div>
-        <input        
-        onChange={(e) => {
-                setInputText(e.target.value);
-                setHistoryList([...historyList, e.target.value]);
-            }}
-            placeholder="Enter Some Text"
-        />
-        <br />
-        {inputText}
-        <hr />
-        <br />
-        <ul>
-            {historyList.map((rec) => {
-                return <div>{rec}</div>
-            })}
-        </ul>
-    </div>
+const ImageChangeOnScroll = () => {
+    return (
+        <div className={styles.centerDiv}>
+            <ImageToggleOnScroll primaryImg="/static/bw/pic1-bw.jpg"
+                secondaryImg="/static/color/pic1-color.jpg"
+                alt="" />
+            <br /><br />
+            <ImageToggleOnScroll primaryImg="/static/bw/pic2-bw.jpg"
+                secondaryImg="/static/color/pic2-color.jpg"
+                alt="" />
+            <br /><br />
+            <ImageToggleOnScroll primaryImg="/static/bw/pic3-bw.jpg"
+                secondaryImg="/static/color/pic3-color.jpg"
+                alt="" />
+            <br /><br />
+            <ImageToggleOnScroll primaryImg="/static/bw/pic4-bw.jpg"
+                secondaryImg="/static/color/pic4-color.jpg"
+                alt="" />
+            <br /><br />
+            <ImageToggleOnScroll primaryImg="/static/bw/pic1-bw.jpg"
+                secondaryImg="/static/color/pic1-color.jpg"
+                alt="" />
+            <br /><br />
+            <ImageToggleOnScroll primaryImg="/static/bw/pic2-bw.jpg"
+                secondaryImg="/static/color/pic2-color.jpg"
+                alt="" />
+            <br /><br />
+            <ImageToggleOnScroll primaryImg="/static/bw/pic3-bw.jpg"
+                secondaryImg="/static/color/pic3-color.jpg"
+                alt="" />
+            <br /><br />
+            <ImageToggleOnScroll primaryImg="/static/bw/pic4-bw.jpg"
+                secondaryImg="/static/color/pic4-color.jpg"
+                alt="" />
+        </div>
+    );
 };
 
-export default InputElement;
+export default ImageChangeOnScroll;
