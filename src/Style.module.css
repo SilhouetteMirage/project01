@@ -1,0 +1,9 @@
+.smallimg {
+    max-height: 620px;
+    max-width: 440px;
+}
+
+.centerDiv {
+    margin: auto;
+    text-align: center;
+}
